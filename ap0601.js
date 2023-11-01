@@ -158,7 +158,7 @@ function init() {
     axes.visible = controls.axes;
     // 物体の回転
     cube.rotation.y += 0.01 * controls.rotation;
-    sphere.rotation.y -= 0.01 * controls.rotation;
+    // sphere.rotation.y -= 0.01 * controls.rotation;
     // 描画
     renderer.render(scene, camera);
     // アニメーション
