@@ -58,18 +58,18 @@ function init() {
     uvs.array[i] = 0;
   }
   // UVマッピング関数
-  function setUvs(f, x, y) {
+  function setUvs(f, x, s) {
     f = f * 6;
-    switch (y) {
-    case 0: // 最上部
+    switch (s) {
+    case 1: // 1段目
       uvs.array[f]   = x0 + dx * x;
-      uvs.array[f+1] = y0 - dy;
+      uvs.array[f+1] = y0 - dy; // -dy + 0
       uvs.array[f+2] = x0 + dx * (x + 2);
-      uvs.array[f+3] = y0 - dy;
+      uvs.array[f+3] = y0 - dy; // -dy + 0
       uvs.array[f+4] = x0 + dx * (x + 1);
-      uvs.array[f+5] = y0;
-      break;
-    case 1: // 2段目
+      uvs.array[f+5] = y0;      // -dy + dy;
+    break;
+    case 2: // 2段目
       uvs.array[f]   = x0;
       uvs.array[f+1] = y0;
       uvs.array[f+2] = x0;
@@ -77,7 +77,7 @@ function init() {
       uvs.array[f+4] = x0;
       uvs.array[f+5] = y0;
       break;
-    case 2: // 3段目
+    case 3: // 3段目
       uvs.array[f]   = x0;
       uvs.array[f+1] = y0;
       uvs.array[f+2] = x0;
@@ -85,7 +85,7 @@ function init() {
       uvs.array[f+4] = x0;
       uvs.array[f+5] = y0;
       break;
-    case 3: // 最下部
+    case 4: // 4段目
       uvs.array[f]   = x0;
       uvs.array[f+1] = y0;
       uvs.array[f+2] = x0;
@@ -97,7 +97,7 @@ function init() {
   }
   // 関数の適用
   // 最上段
-  setUvs( 0, 1, 0); setUvs( 1, 3, 0); setUvs( 2, 5, 0); setUvs( 3, 7, 0); setUvs( 4, 9, 0);
+  setUvs( 0, 1, 1); setUvs( 1, 3, 1);
   // 2段目
   
   // 3段目

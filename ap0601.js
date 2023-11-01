@@ -5,7 +5,7 @@
 "use strict"; // 厳格モード
 
 import * as THREE from 'three';
-import { TrackballControls } from 'control';
+// import { TrackballControls } from 'control';
 import GUI from 'gui';
 
 // ３Ｄページ作成関数の定義
@@ -15,8 +15,8 @@ function init() {
     axes: true,
     reset: function() {
       // カメラの制御をリセットする
-      trackballControls.reset();
-      trackballControls.target = new THREE.Vector3(0,1,0);
+      // trackballControls.reset();
+      // trackballControls.target = new THREE.Vector3(0,1,0);
     }
   };
 
@@ -40,11 +40,11 @@ function init() {
     .appendChild(renderer.domElement);
 
   // カメラコントロール
-  const trackballControls = new TrackballControls(camera, renderer.domElement);
-  trackballControls.rotateSpeed = 1.0;
-  trackballControls.zoomSpeed = 1.0;
-  trackballControls.panSpeed = 1.0;
-  trackballControls.target = new THREE.Vector3(0, 1, 0);
+  // const trackballControls = new TrackballControls(camera, renderer.domElement);
+  // trackballControls.rotateSpeed = 1.0;
+  // trackballControls.zoomSpeed = 1.0;
+  // trackballControls.panSpeed = 1.0;
+  // trackballControls.target = new THREE.Vector3(0, 1, 0);
 
   // 座標軸の設定
   const axes = new THREE.AxesHelper(18);
@@ -72,15 +72,15 @@ function init() {
   scene.add(cube);
 
   // 球の作成
-  const sphereGeometry = new THREE.SphereGeometry(1, 24, 24);
-  const sphereMaterial = new THREE.MeshPhongMaterial();
-  const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+  // const sphereGeometry = new THREE.SphereGeometry(1, 24, 24);
+  // const sphereMaterial = new THREE.MeshPhongMaterial();
+  // const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 
   // 球にテクスチャを登録
   // sphereMaterial.map = texture2;
 
   // 球の位置
-  sphere.position.set(2.5, 2, -1);
+  // sphere.position.set(2.5, 2, -1);
  
   // 球は影を作る
   
@@ -153,7 +153,7 @@ function init() {
 
   function render() {
     // カメラ制御の更新
-    trackballControls.update();
+    // trackballControls.update();
     // 座標軸のON/OFF
     axes.visible = controls.axes;
     // 物体の回転
