@@ -1,12 +1,12 @@
 //
-// 応用プログラミング 第6回 課題2 (ap0602)
-// G184002021 拓殖太郎
+// 応用プログラミング 第5回 課題2 (ap0502)
+// G384002023 拓殖太郎
 //
 "use strict"; // 厳格モード
 
 import * as THREE from 'three';
 
-import GUI from 'gui';
+import GUI from 'ili-gui';
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -39,7 +39,7 @@ function init() {
   const axes = new THREE.AxesHelper(18);
   scene.add(axes);
   
-   // テクスチャの読み込み
+  // テクスチャの読み込み
 
   // 正20面体の作成
   const geometry = new THREE.IcosahedronGeometry();
@@ -113,15 +113,15 @@ function init() {
   scene.add(icosahedron);
 
   // 光源の作成
-  const dirLight1 = new THREE.DirectionalLight();
+  const dirLight1 = new THREE.DirectionalLight(0xFFFFFF, 2);
   dirLight1.position.set(3, 6, 8);
   scene.add(dirLight1);
 
-  const dirLight2 = new THREE.DirectionalLight(0x808080);
+  const dirLight2 = new THREE.DirectionalLight(0xC0C0C0, 2);
   dirLight2.position.set(-3, -6, -8);
   scene.add(dirLight2);
 
-  const ambLight = new THREE.AmbientLight(0x404040);
+  const ambLight = new THREE.AmbientLight(0x808080, 2);
   scene.add(ambLight);
 
   // 描画関数の定義
