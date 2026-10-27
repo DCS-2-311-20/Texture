@@ -121,7 +121,7 @@ function init() {
   dirLight2.position.set(-3, -6, -8);
   scene.add(dirLight2);
 
-  const ambLight = new THREE.AmbientLight(0x808080, 2);
+  const ambLight = new THREE.AmbientLight(0x808080, 1);
   scene.add(ambLight);
 
   // 描画関数の定義
