@@ -1,12 +1,12 @@
 //
 // 応用プログラミング 第5回 課題2 (ap0502)
-// G484002024 拓殖太郎
+// G58400-2025 拓殖太郎
 //
 "use strict"; // 厳格モード
 
 import * as THREE from 'three';
 
-import GUI from 'ili-gui';
+import GUI from 'lil-gui';
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -30,7 +30,7 @@ function init() {
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize( window.innerWidth, window.innerHeight );
   renderer.setClearColor( 0x406080 );
-  document.getElementById("WebGL-output")
+  document.getElementById("WebGL")
     .appendChild(renderer.domElement);
 
   // カメラ制御

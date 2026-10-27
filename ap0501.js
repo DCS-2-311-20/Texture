@@ -1,12 +1,12 @@
 //
 // 応用プログラミング 第5回 課題1 (ap0501)
-// G484002024 拓殖太郎
+// G584002025 拓殖太郎
 //
 "use strict"; // 厳格モード
 
 import * as THREE from 'three';
 // import { OrbitControls } from 'three/addons';
-import GUI from 'ili-gui';
+import GUI from 'lil-gui';
 
 // ３Ｄページ作成関数の定義
 function init() {
@@ -31,7 +31,7 @@ function init() {
   // レンダラに影の処理をさせる
   
   // Webページに描画領域を対応させる
-  document.getElementById("WebGL-output")
+  document.getElementById("WebGL")
     .appendChild(renderer.domElement);
 
   // カメラコントロール
